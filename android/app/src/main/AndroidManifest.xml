@@ -30,6 +30,7 @@
         android:label="KK天气"
         android:usesCleartextTraffic="true"
         android:icon="@mipmap/ic_launcher">
+        <meta-data android:name="com.amap.api.v2.apikey" android:value="0734496be536f1e808c7c4361ead0add"/>
         <activity
             android:name=".MainActivity"
             android:launchMode="singleTop"
@@ -54,9 +55,7 @@
               android:name="io.flutter.embedding.android.SplashScreenDrawable"
               android:resource="@drawable/launch_background"
               />
-            <meta-data
-                android:name="com.amap.api.v2.apikey"
-                android:value="0f7fb717b3412fcaa1f6e4f71148a37d"/>
+
 
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>

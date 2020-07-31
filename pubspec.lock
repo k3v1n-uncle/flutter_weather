@@ -14,7 +14,7 @@ packages:
       name: amap_location_fluttify
       url: "https://pub.flutter-io.cn"
     source: hosted
-    version: "0.14.0+1"
+    version: "0.13.2"
   archive:
     dependency: transitive
     description:

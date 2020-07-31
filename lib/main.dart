@@ -3,7 +3,7 @@ import 'package:kk_weather/model/home/homePage.dart';
 import 'package:flutter/services.dart';
 import 'dart:io';
 
-void main() {
+void main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
   SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp])
