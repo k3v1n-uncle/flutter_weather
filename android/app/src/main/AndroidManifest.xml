@@ -27,7 +27,7 @@
 
     <application
         android:name="io.flutter.app.FlutterApplication"
-        android:label="KK天气"
+        android:label="简约天气"
         android:usesCleartextTraffic="true"
         android:icon="@mipmap/ic_launcher">
         <meta-data android:name="com.amap.api.v2.apikey" android:value="0734496be536f1e808c7c4361ead0add"/>

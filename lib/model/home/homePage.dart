@@ -3,7 +3,6 @@ import 'package:permission_handler/permission_handler.dart';
 import 'package:amap_location_fluttify/amap_location_fluttify.dart';
 import 'package:kk_weather/utils/commonHttp.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:cached_network_image/cached_network_image.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -292,7 +291,7 @@ class HomePageState extends State<HomePage> {
 
   @override
   void dispose() {
-    AmapLocation.dispose();
+    AmapLocation.instance.dispose();
     super.dispose();
   }
 
@@ -311,9 +310,9 @@ class HomePageState extends State<HomePage> {
   }
 
   ///获取定位
-  void checkPosition() async {
+  Future<void> checkPosition() async {
     if (await Permission.location.isGranted) {
-      _location = await AmapLocation.fetchLocation();
+      _location = await AmapLocation.instance.fetchLocation();
       print('locationlocationlocation');
       print(_location);
       getWeather();
@@ -356,7 +355,7 @@ class HomePageState extends State<HomePage> {
         constraints: BoxConstraints.expand(),
         decoration: BoxDecoration(
           gradient: LinearGradient(
-            colors: [Color(0xff6B4AFF), Color(0xff78C5F7)],
+            colors: [Color(0xff6C7EFF), Color(0xff78C5F7)],
             begin: Alignment.topCenter,
             end: Alignment.bottomCenter,
           ),
@@ -385,15 +384,15 @@ class HomePageState extends State<HomePage> {
                     Icon(
                       Icons.place,
                       color: Colors.white,
-                      size: 18,
+                      size: 16,
                     ),
                     SizedBox(
                       width: 5,
                     ),
                     Text(
-                      '${_location.city}',
+                      '${_location == null ? '' : _location.city}',
                       style: TextStyle(
-                        fontSize: ScreenUtil().setSp(48),
+                        fontSize: ScreenUtil().setSp(40),
                         color: Colors.white,
                       ),
                     ),
@@ -937,14 +936,14 @@ class HomePageState extends State<HomePage> {
               ),
             ],
           ),
-          onRefresh: getWeather,
+          onRefresh: checkPosition,
         ),
       ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {
-          checkPosition();
-        },
-      ),
+//      floatingActionButton: FloatingActionButton(
+//        onPressed: () {
+//          checkPosition();
+//        },
+//      ),
     );
   }
 }
