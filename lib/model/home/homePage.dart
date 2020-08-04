@@ -523,7 +523,7 @@ class HomePageState extends State<HomePage> {
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: <Widget>[
                           Text(
-                            '温度区间：${todayWeather['tem1']}℃-${todayWeather['tem2']}℃ 空气湿度：${todayWeather['humidity']}',
+                            '温度：${todayWeather['tem1']}℃-${todayWeather['tem2']}℃ 湿度：${todayWeather['humidity']} 气压：${todayWeather['pressure']}Pa',
                             style: TextStyle(
                               fontSize: ScreenUtil().setSp(32),
                               color: Colors.white,
@@ -828,246 +828,28 @@ class HomePageState extends State<HomePage> {
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: <Widget>[
-                          Container(
-                            height: ScreenUtil().setHeight(100),
-                            child: Column(
-                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: <Widget>[
-                                Text(
-                                  '${todayWeather['zhishu']['chuanyi']['level']}',
-                                  style: TextStyle(
-                                    fontSize: ScreenUtil().setSp(32),
-                                    color: Colors.white,
-                                    fontWeight: FontWeight.bold,
-                                  ),
-                                ),
-                                Text(
-                                  '${todayWeather['zhishu']['chuanyi']['tips']}',
-                                  style: TextStyle(
-                                    fontSize: ScreenUtil().setSp(32),
-                                    color: Colors.white,
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ),
-                          Container(
-                            height: ScreenUtil().setHeight(100),
-                            child: Column(
-                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: <Widget>[
-                                Text(
-                                  '${todayWeather['zhishu']['daisan']['level']}',
-                                  style: TextStyle(
-                                    fontSize: ScreenUtil().setSp(32),
-                                    color: Colors.white,
-                                    fontWeight: FontWeight.bold,
-                                  ),
-                                ),
-                                Text(
-                                  '${todayWeather['zhishu']['daisan']['tips']}',
-                                  style: TextStyle(
-                                    fontSize: ScreenUtil().setSp(32),
-                                    color: Colors.white,
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ),
-                          Container(
-                            height: ScreenUtil().setHeight(100),
-                            child: Column(
-                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: <Widget>[
-                                Text(
-                                  '${todayWeather['zhishu']['ganmao']['level']}',
-                                  style: TextStyle(
-                                    fontSize: ScreenUtil().setSp(32),
-                                    color: Colors.white,
-                                    fontWeight: FontWeight.bold,
-                                  ),
-                                ),
-                                Text(
-                                  '${todayWeather['zhishu']['ganmao']['tips']}',
-                                  style: TextStyle(
-                                    fontSize: ScreenUtil().setSp(32),
-                                    color: Colors.white,
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ),
-                          Container(
-                            height: ScreenUtil().setHeight(100),
-                            child: Column(
-                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: <Widget>[
-                                Text(
-                                  '${todayWeather['zhishu']['chenlian']['level']}',
-                                  style: TextStyle(
-                                    fontSize: ScreenUtil().setSp(32),
-                                    color: Colors.white,
-                                    fontWeight: FontWeight.bold,
-                                  ),
-                                ),
-                                Text(
-                                  '${todayWeather['zhishu']['chenlian']['tips']}',
-                                  style: TextStyle(
-                                    fontSize: ScreenUtil().setSp(32),
-                                    color: Colors.white,
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ),
-                          Container(
-                            height: ScreenUtil().setHeight(100),
-                            child: Column(
-                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: <Widget>[
-                                Text(
-                                  '${todayWeather['zhishu']['ziwaixian']['level']}',
-                                  style: TextStyle(
-                                    fontSize: ScreenUtil().setSp(32),
-                                    color: Colors.white,
-                                    fontWeight: FontWeight.bold,
-                                  ),
-                                ),
-                                Text(
-                                  '${todayWeather['zhishu']['ziwaixian']['tips']}',
-                                  style: TextStyle(
-                                    fontSize: ScreenUtil().setSp(32),
-                                    color: Colors.white,
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ),
-                          Container(
-                            height: ScreenUtil().setHeight(100),
-                            child: Column(
-                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: <Widget>[
-                                Text(
-                                  '${todayWeather['zhishu']['liangshai']['level']}',
-                                  style: TextStyle(
-                                    fontSize: ScreenUtil().setSp(32),
-                                    color: Colors.white,
-                                    fontWeight: FontWeight.bold,
-                                  ),
-                                ),
-                                Text(
-                                  '${todayWeather['zhishu']['liangshai']['tips']}',
-                                  style: TextStyle(
-                                    fontSize: ScreenUtil().setSp(32),
-                                    color: Colors.white,
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ),
-                          Container(
-                            height: ScreenUtil().setHeight(100),
-                            child: Column(
-                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: <Widget>[
-                                Text(
-                                  '${todayWeather['zhishu']['kaiche']['level']}',
-                                  style: TextStyle(
-                                    fontSize: ScreenUtil().setSp(32),
-                                    color: Colors.white,
-                                    fontWeight: FontWeight.bold,
-                                  ),
-                                ),
-                                Text(
-                                  '${todayWeather['zhishu']['kaiche']['tips']}',
-                                  style: TextStyle(
-                                    fontSize: ScreenUtil().setSp(32),
-                                    color: Colors.white,
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ),
-                          Container(
-                            height: ScreenUtil().setHeight(100),
-                            child: Column(
-                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: <Widget>[
-                                Text(
-                                  '${todayWeather['zhishu']['xiche']['level']}',
-                                  style: TextStyle(
-                                    fontSize: ScreenUtil().setSp(32),
-                                    color: Colors.white,
-                                    fontWeight: FontWeight.bold,
-                                  ),
-                                ),
-                                Text(
-                                  '${todayWeather['zhishu']['xiche']['tips']}',
-                                  style: TextStyle(
-                                    fontSize: ScreenUtil().setSp(32),
-                                    color: Colors.white,
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ),
-                          Container(
-                            height: ScreenUtil().setHeight(100),
-                            child: Column(
-                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: <Widget>[
-                                Text(
-                                  '${todayWeather['zhishu']['lvyou']['level']}',
-                                  style: TextStyle(
-                                    fontSize: ScreenUtil().setSp(32),
-                                    color: Colors.white,
-                                    fontWeight: FontWeight.bold,
-                                  ),
-                                ),
-                                Text(
-                                  '${todayWeather['zhishu']['lvyou']['tips']}',
-                                  style: TextStyle(
-                                    fontSize: ScreenUtil().setSp(32),
-                                    color: Colors.white,
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ),
-                          Container(
-                            height: ScreenUtil().setHeight(100),
-                            child: Column(
-                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: <Widget>[
-                                Text(
-                                  '${todayWeather['zhishu']['diaoyu']['level']}',
-                                  style: TextStyle(
-                                    fontSize: ScreenUtil().setSp(32),
-                                    color: Colors.white,
-                                    fontWeight: FontWeight.bold,
-                                  ),
-                                ),
-                                Text(
-                                  '${todayWeather['zhishu']['diaoyu']['tips']}',
-                                  style: TextStyle(
-                                    fontSize: ScreenUtil().setSp(32),
-                                    color: Colors.white,
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ),
+                          tipWidget(todayWeather['zhishu']['chuanyi']['level'],
+                              todayWeather['zhishu']['chuanyi']['tips']),
+                          tipWidget(todayWeather['zhishu']['daisan']['level'],
+                              todayWeather['zhishu']['daisan']['tips']),
+                          tipWidget(todayWeather['zhishu']['ganmao']['level'],
+                              todayWeather['zhishu']['ganmao']['tips']),
+                          tipWidget(todayWeather['zhishu']['chenlian']['level'],
+                              todayWeather['zhishu']['chenlian']['tips']),
+                          tipWidget(
+                              todayWeather['zhishu']['ziwaixian']['level'],
+                              todayWeather['zhishu']['ziwaixian']['tips']),
+                          tipWidget(
+                              todayWeather['zhishu']['liangshai']['level'],
+                              todayWeather['zhishu']['liangshai']['tips']),
+                          tipWidget(todayWeather['zhishu']['kaiche']['level'],
+                              todayWeather['zhishu']['kaiche']['tips']),
+                          tipWidget(todayWeather['zhishu']['xiche']['level'],
+                              todayWeather['zhishu']['xiche']['tips']),
+                          tipWidget(todayWeather['zhishu']['lvyou']['level'],
+                              todayWeather['zhishu']['lvyou']['tips']),
+                          tipWidget(todayWeather['zhishu']['diaoyu']['level'],
+                              todayWeather['zhishu']['diaoyu']['tips']),
                         ],
                       ),
                     ),
@@ -1081,6 +863,33 @@ class HomePageState extends State<HomePage> {
 //          checkPosition();
 //        },
 //      ),
+    );
+  }
+
+  Widget tipWidget(level, tips) {
+    return Container(
+      height: ScreenUtil().setHeight(100),
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: <Widget>[
+          Text(
+            '$level',
+            style: TextStyle(
+              fontSize: ScreenUtil().setSp(32),
+              color: Colors.white,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+          Text(
+            '$tips',
+            style: TextStyle(
+              fontSize: ScreenUtil().setSp(32),
+              color: Colors.white,
+            ),
+          ),
+        ],
+      ),
     );
   }
 }
