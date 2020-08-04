@@ -385,7 +385,7 @@ class HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     ScreenUtil.init(context, width: 750, height: 1334);
     return Scaffold(
-      backgroundColor: Color(0xff004E95),
+      backgroundColor: Colors.white,
 //      appBar: AppBar(
 //        title: Text(''),
 //        backgroundColor: Color(0xff5B96EF),
